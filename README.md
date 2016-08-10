@@ -49,28 +49,30 @@ $("#button").on({
 		- Customers
 ```
 
+__Note:__ Please, make sure you're using <kbd>tab</kbd>.
+
 ### Output
 
 ```xml
 <map version="1.0.1">
 	<node TEXT="Demo MindMap - Website" LINK="https://www.bmoine.fr/">
-		<node TEXT="Home Page"></node>
-		<node TEXT="Header">
+		<node POSITION="right" TEXT="Home Page"></node>
+		<node POSITION="left" TEXT="Header">
 			<node TEXT="Logo"></node>
 			<node TEXT="Navigation links"></node>
 		</node>
-		<node TEXT="Side Bar">
+		<node POSITION="right" TEXT="Side Bar">
 			<node TEXT="Search"></node>
 			<node TEXT="Contact info"></node>
 			<node TEXT="Newsletter box"></node>
 			<node TEXT="RSS options"></node>
 		</node>
-		<node TEXT="Footer">
+		<node POSITION="left" TEXT="Footer">
 			<node TEXT="Navigation links"></node>
 			<node TEXT="Images"></node>
 			<node TEXT="Privacy policy"></node>
 		</node>
-		<node TEXT="Sub pages">
+		<node POSITION="right" TEXT="Sub pages">
 			<node TEXT="Projects"></node>
 			<node TEXT="Board info"></node>
 			<node TEXT="Branches"></node>
