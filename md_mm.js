@@ -45,6 +45,7 @@ jQuery.fn.convertTOCtoMM = function(options){
                     line,  // Référence à une ligne sélectionnée dans le tableau lines
                     level,  // Niveau de tabulation de la ligne sélectionnée
                     prevlevel,  // Niveau de tabulation de la ligne précédente
+                    position = '',  // Position du noeud sur la carte (i.e. droite ou gauche)
                     nextlevel;  // Niveau de tabulation de la ligne suivante
 
                 for (var i = 0; i < lines.length; i++) {
@@ -68,6 +69,17 @@ jQuery.fn.convertTOCtoMM = function(options){
                     elem.id = i;  // Index du noeud dans tout le corps (note: utilisé pour la fermeture des balises restantes)
                     elem.xml = line.replace(/^(\t*)?\-\s(\w+|\W+|.+)(\s*|\t*)$/, '$1<node TEXT="$2">');  // XML correspondant au noeud de la MindMap
                     elem.xml = elem.xml.replace(/\[([^\]]+)\]\(([^\)]+)\)/, '$1" LINK="$2');  // Ajoute, s'il existe, un lien au noeud
+
+                    // Ajout la position du noeud sur la carte
+                    if (level == 1) {
+                        if (position == 'left' || position == '') {
+                            position = 'right';
+                        } else {
+                            position = 'left';
+                        }
+                        elem.xml = elem.xml.replace(/node TEXT/, 'node POSITION="' + position + '" TEXT');
+                    }
+
                     elem.prevlevel = prevlevel;  // Niveau du noeud précédent
                     elem.level = level;  // Niveau du noeud actuel
                     elem.nextlevel = nextlevel;  // Niveau du noeud suivant
