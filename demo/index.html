@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope="itemscope" itemtype="http://schema.org/QAPage">
+    <head>
+        <!-- BEGIN Metadata -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
+
+        <title>Markdown to Mindmap</title>
+        <!-- END Metadata -->
+
+        <!-- BEGIN Stylesheets -->
+        <link rel="stylesheet" media="all" href="main.css" />
+        <!-- END Stylesheets -->
+
+        <!-- BEGIN Scripts -->
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
+        <script src="https://raw.githubusercontent.com/Creased/markdown-to-mindmap/master/md_mm.js"></script>
+        <!-- END Scripts -->
+    </head>
+    <body>
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <h1 class="page-header">{ Markdown to Mindmap } <span class="small">by Creased</span></h1>
+                    <div class="col-l-12 col-m-12 col-s-12">
+                        <textarea id="input" placeholder="Table of content..." required="required"></textarea>
+                        <input id="convert" type="button" value="Convert !" />
+                        <input id="download" type="button" disabled="disabled" value="Download !" />
+                    </div>
+                    <pre id="output"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEGIN Scripts -->
+        <script src="core.js"></script>
+        <!-- END Scripts -->
+    </body>
+</html>
