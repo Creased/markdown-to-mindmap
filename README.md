@@ -2,7 +2,7 @@ Markdown to Mindmap
 ===================
 
 This project aims to assist in the converting process of a Markdown file to a
-mindmap respecting the [FreeMind XML Schema](freemind.cvs.sourceforge.net/viewvc/freemind/freemind/freemind.xsd).
+mindmap respecting the [FreeMind XML Schema](http://freemind.cvs.sourceforge.net/viewvc/freemind/freemind/freemind.xsd).
 
 You'll finally be able to generate a mind map from a table of content of a Markdown file.
 
